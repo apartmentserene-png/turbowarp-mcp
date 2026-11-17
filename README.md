@@ -22,12 +22,10 @@ Open your `claude_desktop_config.json` (**Claude Settings → Developer → Edit
 Restart Claude Desktop completely after saving.
 
 ### 2. TurboWarp Extension
-1. Open [TurboWarp Editor](https://turbowarp.org).
-2. Click **Add Extension** (bottom-left) → **Custom Extension** → **URL** tab.
-3. Paste:
-   ```text
-   https://githubusercontent.com
-   ```
+1. Download `tw-mcp.js` from the [Latest Release](https://github.com) (or copy the raw code from [`tw-mcp.js`](https://githubusercontent.com)).
+2. Open [TurboWarp Editor](https://turbowarp.org) → **Add Extension** → **Custom Extension**.
+3. Switch to the **Files** (or **Text**) tab, load `tw-mcp.js`, check **"Run without sandbox"**, and click **Load**.
+
 4. Check **"Run without sandbox"** and click **Load**.
 
 ## Features
