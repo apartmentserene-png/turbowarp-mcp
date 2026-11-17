@@ -1,10 +1,12 @@
-# TurboWarp MCP Studio
+# TurboWarp MCP Studio 🎮🤖
 
-Autonomous AI game dev studio for TurboWarp & Claude Desktop.
+Turn **TurboWarp** into an autonomous AI game development studio connected to **Claude Desktop**. Claude can write Scratch blocks, draw custom SVG vector costumes & backdrops, spawn sprites, press the Green Flag, playtest with keyboard/mouse inputs, and visually inspect the stage via screenshots.
 
-## Setup
+## Quick Setup
 
 ### 1. Claude Desktop Config
+Open your `claude_desktop_config.json` (**Claude Settings → Developer → Edit Config**) and add:
+
 ```json
 {
   "mcpServers": {
@@ -12,112 +14,24 @@ Autonomous AI game dev studio for TurboWarp & Claude Desktop.
       "command": "npx",
       "args": ["-y", "github:apartmentserene-png/turbowarp-mcp"]
     }
-  },
-  "preferences": {
-    "coworkLegacyRootGrantsPruned": true,
-    "remoteToolsDeviceName": "desktop-gip7u7o",
-    "launchPreviewPersistedWorkspaces": [],
-    "launchPreviewSessionScopedSessions": [],
-    "httpCacheZstdLatched": true,
-    "coworkScheduledTasksEnabled": false,
-    "ccdScheduledTasksEnabled": false,
-    "epitaxyPrefs": {
-      "dframe-group-scopes": {},
-      "dframe-local-slice": {
-        "pinnedOrder": [],
-        "homeProjectsPinnedOrder": []
-      },
-      "dframe-code-sections": {
-        "12b9f0ba-ccb9-4eec-a94e-f70ffa4e4b4e/693a1fc9-1dcb-4448-8632-50a25b38ad59": {
-          "sections": [
-            {
-              "id": "pinned",
-              "kind": "pinned",
-              "v": 2,
-              "name": "",
-              "order": 0,
-              "sortBy": "recency",
-              "ascending": false,
-              "show": {
-                "metadata": false,
-                "emptyGroups": false,
-                "sideChats": false,
-                "slack": true
-              },
-              "collapsed": false,
-              "shown": true
-            },
-            {
-              "id": "routines",
-              "kind": "routines",
-              "v": 2,
-              "name": "",
-              "order": 1,
-              "sortBy": "recency",
-              "ascending": false,
-              "show": {
-                "metadata": false,
-                "emptyGroups": false,
-                "sideChats": false,
-                "slack": true
-              },
-              "collapsed": true,
-              "shown": false
-            },
-            {
-              "id": "sessions",
-              "kind": "sessions",
-              "v": 2,
-              "name": "",
-              "order": 2,
-              "sortBy": "recency",
-              "ascending": false,
-              "show": {
-                "metadata": false,
-                "emptyGroups": false,
-                "sideChats": false,
-                "slack": true
-              },
-              "collapsed": false,
-              "shown": true
-            }
-          ],
-          "migratedFrom": 1,
-          "prefsSeeded": true
-        }
-      },
-      "desktop-frame.paneStore.v1": {
-        "state": {
-          "extraPanesByMode": {},
-          "colWeightsByMode": {},
-          "rowSplit": 0.5,
-          "draftNonce": 0,
-          "lastPrimaryCodeSession": null
-        },
-        "version": 4
-      },
-      "starred-session-groups": [],
-      "starred-local-routines": [],
-      "starred-local-code-sessions": [],
-      "starred-cowork-spaces": []
-    },
-    "coworkHipaaRestricted": false,
-    "orgWorkAcrossAppsDisabled": true,
-    "coworkWebSearchEnabled": true,
-    "coworkPreferredBrowser": "built_in",
-    "coworkBrowserToolsEnabled": false,
-    "coworkModelAutoFallbackByAccount": {
-      "12b9f0ba-ccb9-4eec-a94e-f70ffa4e4b4e": true
-    },
-    "bypassPermissionsGateByAccount": {
-      "12b9f0ba-ccb9-4eec-a94e-f70ffa4e4b4e": false
-    }
-  },
-  "coworkUserFilesPath": "C:\\Users\\Admin\\Claude"
+  }
 }
 ```
+*(Windows tip: If `npx` fails to start, use `"command": "npx.cmd"` instead.)*
+
+Restart Claude Desktop completely after saving.
 
 ### 2. TurboWarp Extension
-Open TurboWarp Editor -> Add Extension -> Custom Extension -> URL:
-`https://githubusercontent.com`
-Check **Run without sandbox** and click **Load**.
+1. Open [TurboWarp Editor](https://turbowarp.org).
+2. Click **Add Extension** (bottom-left) → **Custom Extension** → **URL** tab.
+3. Paste:
+   ```text
+   https://githubusercontent.com
+   ```
+4. Check **"Run without sandbox"** and click **Load**.
+
+## Features
+- **Code:** Generate and inject Scratch 3.0 blocks directly onto the Blockly workspace.
+- **Draw:** Create custom SVG vector costumes and stage backdrops.
+- **Playtest:** Trigger Green Flag, broadcasts, simulated key holds, and mouse clicks.
+- **Debug:** Inspect sprite coordinates, variables, lists, speech logs, and live stage screenshots.
